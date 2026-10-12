@@ -10,7 +10,6 @@ Encoding: UTF-8
 Depends:
     R (>= 4.6.1)
 Imports:
-    crew,
     curl,
     digest,
     dplyr,
@@ -20,14 +19,12 @@ Imports:
     jsonlite,
     lubridate,
     memoise,
-    mirai,
     pointblank,
     purrr,
     readr,
     rlang,
     sf,
     stringr,
-    tarchetypes,
     targets,
     tibble,
     tidyr,

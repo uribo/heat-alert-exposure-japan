@@ -206,7 +206,7 @@ fetch_moe_forecast_range <- function(
     fixed_time = fixed_time,
     url = url,
     fetched_at = format(Sys.time(), "%Y-%m-%d %H:%M:%S JST", tz = "Asia/Tokyo"),
-    records = n_data,
+    count = n_data,
     bytes = length(body),
     sha256 = digest::digest(body, algo = "sha256", serialize = FALSE)
   )
@@ -216,8 +216,8 @@ fetch_moe_forecast_range <- function(
 # sha256 and row count. forecast_val stays in tenths of a degree (integer).
 read_moe_forecast <- function(manifest, dir) {
   purrr::pmap(
-    dplyr::select(manifest, file, bytes, records, sha256, fixed_time),
-    \(file, bytes, records, sha256, fixed_time) {
+    dplyr::select(manifest, file, bytes, count, sha256, fixed_time),
+    \(file, bytes, count, sha256, fixed_time) {
       con <- gzfile(file.path(dir, file), "rb")
       body <- readBin(con, "raw", n = bytes + 1L)
       close(con)
@@ -229,8 +229,8 @@ read_moe_forecast <- function(manifest, dir) {
       }
       parsed <- jsonlite::fromJSON(rawToChar(body))
       df <- tibble::as_tibble(parsed$data)
-      if (nrow(df) != records) {
-        rlang::abort(glue::glue("{file}: {nrow(df)} rows, manifest {records}."))
+      if (nrow(df) != count) {
+        rlang::abort(glue::glue("{file}: {nrow(df)} rows, manifest {count}."))
       }
       # The API has to have honoured fixed_time: every bulletin in the file
       # is issued at that clock time.

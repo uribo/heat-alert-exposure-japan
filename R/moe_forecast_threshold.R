@@ -197,7 +197,7 @@ read_moe_forecast_set <- function(
     col_types = readr::cols(
       from_date = readr::col_date(),
       to_date = readr::col_date(),
-      records = readr::col_integer(),
+      count = readr::col_integer(),
       bytes = readr::col_integer(),
       .default = readr::col_character()
     )

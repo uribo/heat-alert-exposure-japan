@@ -14,7 +14,7 @@ All identifiers beginning with `FD` are anonymized. The public tables contain no
 | `data-raw/release/moe_alert_historical.csv` | Historical heat-alert bulletins scraped from Ministry of the Environment pages | CC BY 4.0 | `ccaddb4298ff4f6ab171dc31893f2818f78df1f6375c33f01fa8106a572410fa` |
 | `data-raw/release/moe_forecast_area_day.csv` | Area-by-day reconstruction derived from the frozen Ministry of the Environment forecast bodies | CC BY 4.0 | `1148bb89a09a2e90c81ab4ac488a00a9126b49566159b0667e34f34f19ffe791` |
 | `data-raw/release/moe_wbgt_daily_agg.csv.gz` | Station-by-day WBGT summary derived from Ministry of the Environment final station-month files | CC BY 4.0 | `d870916389aa98d5c727152d2ad1a941ad04c58424da22b3d5166ee6ff616db6` |
-| `data-raw/release/population_2020.csv` | 2020 municipality population and age classes from e-Stat census table 0003445244, mapped to 2024 N03 codes | CC BY 4.0 | `b5e2fc7c1aa440d4b5bca7cbf07a96a31abc9e0d54a25a930a65a74122ffa30c` |
+| `data-raw/release/population_2020.csv` | 2020 municipality population and age classes from e-Stat census table 0003445139, mapped to 2024 N03 codes | CC BY 4.0 | `b5e2fc7c1aa440d4b5bca7cbf07a96a31abc9e0d54a25a930a65a74122ffa30c` |
 | `data-raw/release/sample_departments.csv` | Anonymized study sample derived from the service-area crosswalk | CC BY-SA 4.0 | `5f4fc90d3523f3a3e7db08aa9a4fb1f4e87d1cec352c77ee1d43bbd6617bb0ce` |
 
 **Provisional export notice.** These ten files were built from the author's laptop targets store, whose upstream build used `shortcut = TRUE`. The formal release set will be regenerated on the canonical machine. The hashes above record the current bytes so that replacement is a visible diff. Final-release SHA256 values: **[TO BE REPLACED AFTER CANONICAL REGENERATION]**.
@@ -24,7 +24,7 @@ All identifiers beginning with `FD` are anonymized. The public tables contain no
 | File or directory | Source and role | License and integrity |
 |---|---|---|
 | `data-raw/frozen/estat_0000020203_taxable_income.csv` | e-Stat taxable-income table 0000020203 | CC BY 4.0; checked by `data-raw/frozen/SHA256SUMS` |
-| `data-raw/frozen/moe_forecast/*.json.gz` | Ministry of the Environment forecast API responses used for the 05:00/17:00 and 04:00/16:00 reconstructions | CC BY 4.0; 1,217 files checked by the two shipped SHA256SUMS files and documented by the two manifests |
+| `data-raw/frozen/moe_forecast/*.json.gz` | Ministry of the Environment forecast API responses used for the 05:00/17:00 and 04:00/16:00 reconstructions | CC BY 4.0; 1,217 files checked by the two shipped SHA256SUMS files and documented by the two manifests, whose `count` column is the number of forecast records in each file (the manifests are kept byte-identical to the private provenance record) |
 | `data-raw/wbgt_stations2023.csv` | Ministry of the Environment 2023 WBGT station roster | CC BY 4.0 |
 
 WBGT station coordinates are package data from `jmastats` 0.3.0; the pipeline de-duplicates them by area and station number, applies the Choshi station-number correction used to build the released table, and joins them to the shipped 2023 roster. Version 0.3.0 is pinned because a later package version drops coordinates for a station used by the study. No AMeDAS metadata file is downloaded.
