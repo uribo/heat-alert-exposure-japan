@@ -1,0 +1,34 @@
+Package: heat.alert.exposure.japan
+Type: Project
+Title: Heat-Alert Exposure in Japan
+Version: 0.0.0.9000
+Authors@R: person("Shinya", "Uryu", role = c("aut", "cre"))
+Description: Reproducible exposure-side data pipeline for a study of heat
+    alerts in Japan.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends:
+    R (>= 4.6.1)
+Imports:
+    crew,
+    curl,
+    digest,
+    dplyr,
+    glue,
+    here,
+    jmastats,
+    jsonlite,
+    lubridate,
+    memoise,
+    mirai,
+    pointblank,
+    purrr,
+    readr,
+    rlang,
+    sf,
+    stringr,
+    tarchetypes,
+    targets,
+    tibble,
+    tidyr,
+    zipangu

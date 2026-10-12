@@ -1,0 +1,7 @@
+prompts/
+.Rproj.user/
+.renv/
+_targets/
+data-raw/downloads/
+*.Rproj
+.DS_Store
