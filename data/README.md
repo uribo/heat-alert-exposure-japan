@@ -4,7 +4,7 @@ All identifiers beginning with `FD` are anonymized. The public tables contain no
 
 ## Release tables
 
-| File | Contents and source | License | Current SHA256 |
+| File | Contents and source | License | SHA256 |
 |---|---|---|---|
 | `data-raw/release/alert_area_roster.csv` | Heat-alert areas in the study sample, derived from Ministry of the Environment alert records | CC BY 4.0 | `3737beea490f39b538253462452fb828bd7d1b3a2a2b2bbdf0b1976ac0098fe4` |
 | `data-raw/release/fd_alert_area.csv` | Anonymized service-area to alert-area and WBGT-station assignment; joins the crosswalk below to official spatial sources | CC BY-SA 4.0 | `efd2306477a5d1a9c8f5c53f4f41ce630ca13c3bad02e64d12748b0c344d96e7` |
@@ -17,7 +17,7 @@ All identifiers beginning with `FD` are anonymized. The public tables contain no
 | `data-raw/release/population_2020.csv` | 2020 municipality population and age classes from e-Stat census table 0003445139, mapped to 2024 N03 codes | CC BY 4.0 | `b5e2fc7c1aa440d4b5bca7cbf07a96a31abc9e0d54a25a930a65a74122ffa30c` |
 | `data-raw/release/sample_departments.csv` | Anonymized study sample derived from the service-area crosswalk | CC BY-SA 4.0 | `5f4fc90d3523f3a3e7db08aa9a4fb1f4e87d1cec352c77ee1d43bbd6617bb0ce` |
 
-**Provisional export notice.** These ten files were built from the author's laptop targets store, whose upstream build used `shortcut = TRUE`. The formal release set will be regenerated on the canonical machine. The hashes above record the current bytes so that replacement is a visible diff. Final-release SHA256 values: **[TO BE REPLACED AFTER CANONICAL REGENERATION]**.
+**Export provenance.** These ten files were built on the canonical targets store (suMS, 2026-10-13, private repository at `be81bc8`) from an up-to-date upstream (only the 14 `release_*` targets were outdated; no `shortcut`). They are byte-identical to the provisional set built earlier on the author's laptop, so the SHA256 values above are the final-release values. The department-name scan (`src/department_name_scan.R` in the private repository) exits 0 on the set; the only stem match is the place name 佐賀 (Saga), which is also an alert-area name.
 
 ## Other shipped inputs
 

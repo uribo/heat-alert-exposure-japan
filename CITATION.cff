@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+type: software
+title: "Heat-alert exposure in Japan: exposure-side data pipeline"
+abstract: "Reproducible exposure-side data pipeline for a study of Japan's Heatstroke Alert at fire-department resolution. Service areas are anonymized; no heat-illness transport records are included."
+authors:
+  - family-names: Uryu
+    given-names: Shinya
+    affiliation: "Tokushima University"
+    email: uryu.shinya@tokushima-u.ac.jp
+repository-code: "https://github.com/uribo/heat-alert-exposure-japan"
+license: MIT
+keywords:
+  - heat illness
+  - heat warning
+  - wet-bulb globe temperature
+  - Japan
+  - fire department
+# Fill in after the first GitHub release is archived by Zenodo:
+# version: "1.0.0"
+# date-released: "YYYY-MM-DD"
+# doi: "10.5281/zenodo.XXXXXXX"
