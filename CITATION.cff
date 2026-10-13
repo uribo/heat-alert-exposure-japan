@@ -16,7 +16,13 @@ keywords:
   - wet-bulb globe temperature
   - Japan
   - fire department
-# Fill in after the first GitHub release is archived by Zenodo:
-# version: "1.0.0"
-# date-released: "YYYY-MM-DD"
-# doi: "10.5281/zenodo.XXXXXXX"
+version: "1.0.0"
+date-released: "2026-10-13"
+doi: 10.5281/zenodo.23329263
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23329262
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: 10.5281/zenodo.23329263
+    description: "Version DOI (v1.0.0)"
